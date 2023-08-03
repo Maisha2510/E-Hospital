@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="797.0" prefWidth="1242.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ehospital.Doctor_ScheduleController">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.topAnchor="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#BackBtn" text="Back">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Label prefHeight="52.0" prefWidth="184.0" text="Schedule List">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="94.0" prefHeight="622.0" prefWidth="1201.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <TableView fx:id="ScheduleTableFxid" prefHeight="636.0" prefWidth="880.0" HBox.hgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="SerialNoFxid" prefWidth="78.0" text="SerialNo" />
+                <TableColumn fx:id="DepartmentFxid" minWidth="0.0" prefWidth="139.0" text="Department Name" />
+                  <TableColumn fx:id="DoctorNameFxid" maxWidth="513.0" prefWidth="171.0" text="Doctor Name" />
+                  <TableColumn fx:id="DoctorIDFxid" maxWidth="513.0" minWidth="0.0" prefWidth="225.0" text="Doctor ID" />
+                  <TableColumn fx:id="VisitingDaysFxid" maxWidth="529.0" minWidth="0.0" prefWidth="175.0" text="Visiting Days" />
+                  <TableColumn fx:id="TimeFxid" minWidth="0.0" prefWidth="119.0" text="Time" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox layoutX="988.0" layoutY="746.0" AnchorPane.rightAnchor="33.0" />
+      <HBox layoutX="90.0" layoutY="746.0" prefHeight="27.0" prefWidth="1066.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="86.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="58.403350830078125">
+               <HBox.margin>
+                  <Insets left="100.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="keywordTextField" prefHeight="26.0" prefWidth="760.0" promptText="search keyword" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

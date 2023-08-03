@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="797.0" prefWidth="1242.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ehospital.BillingController">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.topAnchor="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#BackBtn" text="Back">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Label prefHeight="52.0" prefWidth="184.0" text="Bill List">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="94.0" prefHeight="622.0" prefWidth="1201.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <TableView fx:id="BillingTableFxid" onMouseClicked="#SelectedBtn" HBox.hgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="BillingColumnSerialNoFxid" prefWidth="78.0" text="SerialNo" />
+                  <TableColumn fx:id="PatientIdFxid" prefWidth="106.0" text="PatientID" />
+                  <TableColumn fx:id="BilldateFxid" minWidth="0.0" prefWidth="164.0" text="BillDate" />
+                  <TableColumn fx:id="AppointmentIDFxid" prefWidth="172.0" text="AppointmentID" />
+                <TableColumn fx:id="BillIdIdFxid" minWidth="0.0" prefWidth="164.0" text="BillID" />
+                  <TableColumn fx:id="AdditionalFxid" minWidth="0.0" prefWidth="154.0" text="AdditionalBill" />
+                  <TableColumn fx:id="DisFxid" minWidth="0.0" prefWidth="174.0" text="Discount(%)" />
+                  <TableColumn fx:id="TotalFxid" minWidth="0.0" prefWidth="164.0" text="Total" />
+                  <TableColumn fx:id="StatusFxid" minWidth="0.0" prefWidth="164.0" text="Status" />
+              </columns>
+            </TableView>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="283.0">
+               <children>
+                  <TextField fx:id="PatientFxid" onTouchReleased="#SelectItem" prefHeight="25.0" promptText="Enter Patient ID">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#sendDataPatientId" text="send data">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ComboBox fx:id="AppFxid" prefHeight="25.0" prefWidth="288.0" promptText="Select Appointment ID">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <DatePicker fx:id="DateFxid" prefHeight="25.0" prefWidth="291.0" promptText="Select Bill Date">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <TextField fx:id="AdditionalBillFxid" promptText="Enter Additional Bill" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="DiscountFxid" promptText="Enter Discount in percentage">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="CurrentFxid" prefHeight="25.0" prefWidth="288.0" promptText="Select Current Status">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <HBox>
+                     <children>
+                        <Button mnemonicParsing="false" text="Update">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#InsertBtn" text="Insert">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#DeleteBtn" text="Delete">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#ResetBtn" text="Reset" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="797.0" prefWidth="1242.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ehospital.ScheduleController">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.topAnchor="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#BackBtn" text="Back">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Label prefHeight="52.0" prefWidth="184.0" text="Schedule List">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="94.0" prefHeight="622.0" prefWidth="1201.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <TableView fx:id="ScheduleTableFxid" prefHeight="636.0" prefWidth="880.0" HBox.hgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="SerialNoFxid" prefWidth="78.0" text="SerialNo" />
+                <TableColumn fx:id="DepartmentFxid" minWidth="0.0" prefWidth="139.0" text="Department Name" />
+                  <TableColumn fx:id="DoctorNameFxid" maxWidth="513.0" prefWidth="171.0" text="Doctor Name" />
+                  <TableColumn fx:id="DoctorIDFxid" maxWidth="513.0" minWidth="0.0" prefWidth="225.0" text="Doctor ID" />
+                  <TableColumn fx:id="VisitingDaysFxid" maxWidth="529.0" minWidth="0.0" prefWidth="175.0" text="Visiting Days" />
+                  <TableColumn fx:id="TimeFxid" minWidth="0.0" prefWidth="119.0" text="Time" />
+              </columns>
+            </TableView>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="274.0">
+               <children>
+                  <ComboBox fx:id="ScheduleDepartmentCBfxid" onAction="#departmentCBAction" prefHeight="25.0" prefWidth="284.0" promptText="Select Department">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="ScheduleDoctorCBfxid" onAction="#doctorNameCBAction" prefHeight="25.0" prefWidth="288.0" promptText="Select Doctor Name">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="ScheduleDoctorIDCBfxid" prefHeight="25.0" prefWidth="288.0" promptText="Select Doctor ID">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="ScheduleVisitingHoutTFfxid" promptText="Enter Visitng Hour">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select Visiting Days">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="checkbox1" mnemonicParsing="false" onAction="#checkBox1Action" text="Saturday">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox2" mnemonicParsing="false" onAction="#checkBox2Action" text="Sunday" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox3" mnemonicParsing="false" onAction="#checkBox3Action" text="Monday" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox4" mnemonicParsing="false" onAction="#checkBox4Action" text="Tuesday" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox5" mnemonicParsing="false" onAction="#checkBox5Action" text="Wednesday" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox6" mnemonicParsing="false" onAction="#checkBox6Action" text="Thrusday" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="988.0" layoutY="746.0" AnchorPane.rightAnchor="33.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ScheduleInsertBtn" text="Insert">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#ScheduleUpdateBtn" text="Update">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#ScheduleDeleteBtn" text="Delete">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#ScheduleRefreshBtn" text="Refresh">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#ScheduleResetBtn" text="Reset">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+         </children></HBox>
+      <HBox layoutX="1008.0" layoutY="766.0" style="-fx-background-color: #035956; -fx-border-color: #f4f4f4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fill="#e8e8e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Connected to database ||">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Results ||">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="aggregateResult" fill="#e8e8e8" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

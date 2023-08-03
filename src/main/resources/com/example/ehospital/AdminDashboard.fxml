@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ehospital.AdminDashboardController">
+   <children>
+      <BorderPane fx:id="mainPane" prefWidth="1300.0" style="-fx-background-color: #F5F5FC;">
+         <left>
+            <VBox prefHeight="542.0" prefWidth="266.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="760.0" prefWidth="311.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Dashboard" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Category.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="departmentBtnFxid" alignment="BASELINE_LEFT" graphicTextGap="10.0" minWidth="-Infinity" onAction="#departmentBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Department" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Calendar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="241.0" minWidth="-Infinity" onAction="#doctorBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Doctor List" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Result.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" minWidth="-Infinity" onAction="#patientBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Patient List" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Result.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" minWidth="-Infinity" onAction="#scheduleBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Schedule" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Calendar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="585.0" minWidth="-Infinity" onAction="#appointmentBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Appointment" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Calendar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" minWidth="-Infinity" onAction="#billingBtn" prefHeight="100.0" prefWidth="250.0" styleClass="navPaneBtn" text="Billing" textAlignment="RIGHT" textFill="#200e32">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Paper.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="684.0" prefWidth="1136.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#168e90" layoutX="36.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enhance Hospital work activity">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#ddaf42" layoutX="36.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="with Hospital ManagementSystem | E-Hospital">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you concerned about the best hospital management system? Okay, don't worry. Our first priority is tomeet the needs of customers. ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="So, we provide the Hospital - Hospital Management System (HMS) that catersto your needs.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="686.0" fitWidth="691.0" layoutX="513.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/artwork.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="223.0" fitWidth="731.0" layoutX="36.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dashboardIllustration.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="48.0" prefWidth="1300.0" style="-fx-background-color: #168E90;">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button layoutX="1212.0" layoutY="12.0" mnemonicParsing="false" onAction="#logoutbtn" style="-fx-background-radius: 5;" text="Logout">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="66.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-HOSPITAL">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
